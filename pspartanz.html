@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPARTANZ Dance Club - CEG College</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+            background-color: #f5f5f5; /* Light background color */
+            color: #333; /* Dark text color */
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            padding: 0;
+        }
+
+        header img {
+            width: 100%;
+            height: 1000px; /* Adjusted max-height for better viewing */
+        }
+
+        #logo-container {
+            position: absolute;
+            top: 5%;
+            left: 45%;
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 2em;
+            left:600px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+            position: absolute;
+            top: 20%;
+            width: 100%;
+            z-index: 3;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 3px 2px; /* Adjusted padding for better spacing */
+            margin: 0 100px; /* Added margin for better spacing */
+            border-radius: 5px; /* Rounded corners for a modern look */
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        #first-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%; /* Adjusted width for better spacing */
+            max-width: 900px;
+            overflow: hidden;
+            z-index: 3;
+        }
+
+        #first-image {
+            width: 30%; /* Adjusted width for better image display */
+            max-width: 400px;
+        }
+
+        #text {
+            width: 60%;
+            text-align: center;
+            color: #f8f8f8;
+        }
+
+        #second-row {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            overflow: hidden;
+            z-index: 3;
+        }
+
+        #second-row img {
+            width: 23%; /* Adjusted width for better image display */
+            max-width: 300px;
+            padding: 10px;
+            border-radius: 8px; /* Rounded corners for a modern look */
+            animation: slideImage 15s infinite alternate; /* Added animation property */
+        }
+
+        @keyframes slideImage {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        #instagram-link {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333; /* Dark background color */
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/018/725/246/small/background-watercolor-landscape-watercolor-painting-watercolor-sky-watercolor-abstract-watercolor-dreamscape-vector.jpg" alt="Custom Image">
+        <div id="logo-container">
+            <h1>SPARTANZ</h1>
+            <!-- Add your logo image here, adjust the path accordingly -->
+            <img src="https://ceg.annauniv.edu/assets/images/CEG_col.png" alt="Logo" style="width: 50px; height: auto; margin-left: 10px;">
+        </div>
+        <nav>
+            <a href="phome.html">Home</a>
+            <a href="pspartanzeve.html">Events</a>
+            <a href="spartanz_ad_question.php">Queries</a>
+           
+        </nav>
+    </header>
+
+    <div id="first-row">
+        <img id="first-image" src="https://yt3.googleusercontent.com/ytc/APkrFKbByAZ3JSORcVOL99wrq4-xBgdZU3QNv9Hl5crI=s900-c-k-c0x00ffffff-no-rj" alt="First Image">
+        <div id="text">
+            <p>The Spartanz is the official club of the CEG. The official variety show to help students exhibit their talents and passion for street theater</p>
+        </div>
+    </div>
+
+    <div id="second-row">
+        <img src="https://i.ytimg.com/vi/1vB11moxp-c/maxresdefault.jpg" alt="Second Image 1">
+        <img src="https://i.ytimg.com/vi/d6c5iY3eN6g/hqdefault.jpg" alt="Second Image 2">
+        <img src="https://i.ytimg.com/vi/NBb9IWFwpPc/maxresdefault.jpg" alt="Second Image 3">
+        <img src="https://i.ytimg.com/vi/bwbEPwIyeU4/maxresdefault.jpg" alt="Second Image 4">
+    </div>
+    <form action="spartanzupload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit" name="addImage">Add Image</button>
+    </form>
+    <br><br>
+
+    <div id="instagram-link">
+        <p>Follow us on Instagram: <a href="https://www.instagram.com/danceclub_ceg" target="_blank">danceclub_ceg</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 SPARTANZ Dance Club - CEG College. All rights reserved.</p>
+    </footer>
+    <script>
+        // Function to fetch images from the server and update the HTML
+        function fetchImagesAndUpdateHTML() {
+            // Make an AJAX request to fetch images
+            fetch('spartanzupload.php?getImages=true', {
+                method: 'GET',
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Update the HTML to display fetched and existing images
+                    const flashEvents = document.getElementById('flash-events');
+                    
+                    // Create a new h1 element for flash events
+                    const h1Element = document.createElement('h1');
+                    h1Element.style.color = 'brown';
+                    h1Element.textContent = 'TAKE A LOOK AT OUR PREVIOUS HITS';
+                    flashEvents.appendChild(h1Element);
+        
+                    // Create img elements for each image and append them to flash events
+                    data.images.forEach(image => {
+                        const imgElement = document.createElement('img');
+                        imgElement.src = 'suploads/' + image.filename;
+                        imgElement.alt = 'Flash Event Image';
+                        flashEvents.appendChild(imgElement);
+                    });
+                } else {
+                    console.error('Failed to fetch images:', data.error);
+                }
+            })
+            .catch(error => console.error('Error fetching images:', error));
+        }
+        
+        // Call the function to fetch and update images on page load
+        fetchImagesAndUpdateHTML();
+        </script>
+        <script>
+    // Function to handle the response after adding an image
+    function handleImageUploadResponse(response) {
+    // Check if the image upload was successful
+    if (response.success) {
+      // Display a success message or redirect to the home page
+      alert(response.message);
+      // Redirect to the home page after displaying the alert
+      window.location.href = 'pspartanz.html';
+    } else {
+      // Display an error message (you may customize this part)
+      alert('Error adding image: ' + response.error);
+    }
+    }
+    
+    
+    </script><script>
+    // Function to handle the response after adding an image
+    function handleImageUploadResponse(response) {
+        // Check if the image upload was successful
+        if (response.success) {
+            // Redirect to the home page after displaying the alert
+            window.location.href = 'pspartanz.html';
+        } else {
+            // Display an error message (you may customize this part)
+            alert('Error adding image: ' + response.error);
+        }
+    }
+    </script>
+
+</body>
+
+</html>

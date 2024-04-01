@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Official Theatre Club of CEG</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url("C:\Users\jjaya\Downloads\tv3.png") no-repeat center center fixed;
+            background-size: cover;  
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #300808;
+            color: #fff;
+            position: relative;
+        }
+
+        header img {
+            position: absolute;
+            top: 10px; /* Adjust the top position as needed */
+            left: 10px; /* Adjust the left position as needed */
+            width: 50px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        #c {
+            background-color: #300808;
+            padding: 10px; /* Adjust the padding as needed */
+            margin-bottom: 20px; /* Add margin to create space between brown and flash images */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .college-info {
+            display: flex;
+            align-items: center;
+            background-color: #300808;
+            padding: 1px;
+        }
+
+        .college-logo {
+            width: 50px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #300808;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 8px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .club-image {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .description-box {
+            display: flex;
+            justify-content: space-between;
+            background-color:white;
+            padding: 80px;
+            padding-left: 100px;
+            padding-right: 200px;
+            margin: 20px;
+            border-radius: 10px;
+            align-items: center;
+        }
+
+        .description-logo {
+            width: 400px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 80px;
+        }
+
+        .description-text {
+            flex-grow: 1;
+            color: #fff;
+        }
+        #C2{
+            background-color: BLACK;
+        }
+
+        #flash-events {
+            margin: 20px;
+            overflow: hidden;
+        }
+
+        #flash-events img {
+            width: 100%;
+            max-width: 340px;
+            animation: slide 15s infinite alternate;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        #instagram-link {
+            text-align: center;
+            margin: 20px 0;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: auto;
+            background-color: #300808;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <img style="height:60px;width=60px;"src="data:image/jpeg;base64,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" alt="Theatron Logo">
+        <h1>THEATRON</h1>
+        <h4>THE OFFICIAL </h4><h1>DRAMA CLUB</h1>
+    </header>
+
+
+    <div id="c">
+        <div class="college-info">
+            <!-- College Logo -->
+            <img class="college-logo" src="https://ceg.annauniv.edu/images/gallerynew/4.jpg" alt="College Logo">
+            <!-- College Name -->
+            <h2>AU-CEG</h2>
+        </div>
+
+        <nav>
+            <a href="phome.html">Home</a>
+            <a href="pteve.html">Events</a>
+            <a href="th_ad_question.php">queries</a>
+            
+        </nav>
+    </div>
+    <h2 style="text-align:center;color:#300808"> WELCOME TO THEATRON</h2>
+
+    <div class="club-image">
+        <!-- Your video or image goes here -->
+    </div>
+
+    <div class="description-box">
+        <!-- Description Logo -->
+        <img class="description-logo" src="Screenshot 2023-12-01 224836.png" alt="Description Logo">
+        <!-- Description Text -->
+        <div class="description-text">
+            <h4 style="color:rgb(48, 8, 8)">The official theater and drama club of Anna University, started in 2006 with actor Amitash Pradhan (VIP) as one of the co-founders.<br> Theatron was initiated in the hope of inspiring creative ideas and celebrations the artform..
+                The club has also collaborated with other theater organisations like Crea-Shakthi and won prizes in prestigious college-level competitions. Exciting weekly meets which include games, workshops and discussions are conducted with the 50+ member network.
+            </h4>
+        </div>
+    </div>
+
+    <div id="flash-events">
+        <H1 STYLE="COLOR:BROWN">TAKE A LOOK AT OUR PREVIOUS HITS</H1>
+        <!-- Add images for flash events, adjust the file names accordingly -->
+        <img src="t1.jpg" alt="Flash Event 1">
+        <img src="t5.jpg" alt="Flash Event 3">
+        <img src="t4.jpg" alt="Flash Event 4">
+        <img src="th3.jpg" alt="Flash Event 5">
+    </div>
+    <form action="tuploads.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit" name="addImage">Add Image</button>
+    </form>
+    <br><br>
+
+    <footer>
+        <div id="instagram-link">
+            <p>Follow us on Instagram: <a href="https://instagram.com/theatron_au?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">danceclub_ceg</a></p>
+        </div>
+        <p>&copy; 2023 Theatre club - CEG College. All rights reserved.</p>
+    </footer>
+    <script>
+        // Function to fetch images from the server and update the HTML
+        function fetchImagesAndUpdateHTML() {
+            // Make an AJAX request to fetch images
+            fetch('tuploads.php?getImages=true', {
+                method: 'GET',
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Update the HTML to display fetched and existing images
+                    const flashEvents = document.getElementById('flash-events');
+                    
+                    // Create a new h1 element for flash events
+                    const h1Element = document.createElement('h1');
+                    h1Element.style.color = 'brown';
+                    h1Element.textContent = 'TAKE A LOOK AT OUR PREVIOUS HITS';
+                    flashEvents.appendChild(h1Element);
+        
+                    // Create img elements for each image and append them to flash events
+                    data.images.forEach(image => {
+                        const imgElement = document.createElement('img');
+                        imgElement.src = 'tuploads/' + image.filename;
+                        imgElement.alt = 'Flash Event Image';
+                        flashEvents.appendChild(imgElement);
+                    });
+                } else {
+                    console.error('Failed to fetch images:', data.error);
+                }
+            })
+            .catch(error => console.error('Error fetching images:', error));
+        }
+        
+        // Call the function to fetch and update images on page load
+        fetchImagesAndUpdateHTML();
+        </script>
+        <script>
+    // Function to handle the response after adding an image
+    function handleImageUploadResponse(response) {
+    // Check if the image upload was successful
+    if (response.success) {
+      // Display a success message or redirect to the home page
+      alert(response.message);
+      // Redirect to the home page after displaying the alert
+      window.location.href = 'ptheatron.html';
+    } else {
+      // Display an error message (you may customize this part)
+      alert('Error adding image: ' + response.error);
+    }
+    }
+    
+    
+    </script><script>
+    // Function to handle the response after adding an image
+    function handleImageUploadResponse(response) {
+        // Check if the image upload was successful
+        if (response.success) {
+            // Redirect to the home page after displaying the alert
+            window.location.href = 'ptheatron.html';
+        } else {
+            // Display an error message (you may customize this part)
+            alert('Error adding image: ' + response.error);
+        }
+    }
+    </script>
+    
+
+
+</body>
+</html>

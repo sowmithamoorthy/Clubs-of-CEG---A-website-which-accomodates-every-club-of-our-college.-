@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEG Official Clubs</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+            /* Prevent background image scrolling */
+        }
+
+        header {
+            background-color: transparent;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .clubs-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            min-height: calc(100vh - 40px);
+            background-color: #f0f0f0;
+            margin-top: 60px; /* Adjusted to make space for the fixed header */
+            position: relative; /* Added to make sure content is positioned relative to its container */
+        }
+
+        .club-container {
+            flex: 0 0 calc(25% - 10px);
+            margin: 5px;
+            padding: 5px;
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.7);
+            position: relative;
+            width: 100px;
+        }
+
+        .club-container:first-child {
+            background: url("background-image.jpg") no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+
+        .club-container:hover {
+            transform: scale(1.05);
+        }
+
+        .club-image {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .club-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .club-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .club-name {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: grey;
+            color: #000000;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .background-img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        h1 {
+            margin: 0;
+            color: white;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 200px;
+            padding: 10px; /* Increase padding for a better Netflix-style look */
+            border: none;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #e50914; /* Netflix red color */
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmAr5KjPN75ls0CQ8S4o4cYVH5obRPc3eoaggglLYLMA&s" alt="Background Image" class="background-img">
+
+    <header><br>
+        <h1>CEG Official Clubs</h1>
+    </header>
+    <br><br><br>
+
+    <button id="homeButton" onclick="goToHomePage()">Home</button>
+    <form>
+        <label for="clubFilter">Filter Clubs:</label>
+        <input type="text" id="clubFilter" placeholder="Enter club name...">
+        <button type="button" onclick="filterClubs()">Filter</button>
+    </form>
+
+    <div class="clubs-container">
+        <div class="club-container" onclick="showClubDetails('club1')">
+            <img src="spa.jpg" alt="SPA" class="club-image">
+            <img src="club1.jpg" alt="SPA Logo" class="club-logo">
+            <div class="club-details">
+                <span class="club-name">SPA</span>
+                <span class="club-description">Student Photography Association</span>
+            </div>
+        </div>
+
+        <div class="club-container" onclick="showClubDetails('club2')">
+            <img src="music.jpg" alt="Music Club" class="club-image">
+            <img src="club2.jpg" alt="Music Club Logo" class="club-logo">
+            <div class="club-details">
+                <span class="club-name">Music Club</span>
+                <span class="club-description">Bringing music enthusiasts together</span>
+            </div>
+        </div>
+
+        <div class="club-container" onclick="showClubDetails('club3')">
+            <img src="coding.jpg" alt="Coding Club" class="club-image">
+            <img src="club3.jpg" alt="Coding Club Logo" class="club-logo">
+            <div class="club-details">
+                <span class="club-name">Coding Club</span>
+                <span class="club-description">For the love of coding</span>
+            </div>
+        </div>
+
+        <div class="club-container" onclick="showClubDetails('club4')">
+            <img src="sports.jpg" alt="Sports Club" class="club-image">
+            <img src="club4.jpg" alt="Sports Club Logo" class="club-logo">
+            <div class="club-details">
+                <span class="club-name">Sports Club</span>
+                <span class="club-description">Get active, stay active</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 CEG Official Clubs</p>
+    </footer>
+
+    <script>
+        function goToHomePage() {
+            // Implement the function to go to the home page
+        }
+
+        function filterClubs() {
+            // Implement the function to filter clubs
+        }
+
+        function showClubDetails(clubId) {
+            // Implement the function to show club details based on the clubId
+        }
+    </script>
+</body>
+
+</html>

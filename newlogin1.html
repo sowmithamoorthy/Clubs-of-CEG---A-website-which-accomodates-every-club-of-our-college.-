@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Hide scrollbars */
+            background-image: url('C:\\xampp\\htdocs\\Clubs of CEG\\log1.jpg'); /* Use the correct path to your background image */
+            background-size: cover;
+        }
+
+        #login-box {
+            width:20%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #login-box input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        #login-button, #signup-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Add transition effect */
+        }
+
+        #login-button:hover, #signup-button:hover {
+            background-color: #45a049; /* Change color on hover */
+        }
+    </style>
+    <title>Login and Signup Page</title>
+</head>
+<body>
+
+    <img src="log1.jpg" alt="Background Image" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+
+    <div id="login-box">
+        <h2 id="form-title">Login</h2>
+        <form action="newlogin1.php" method="post">
+            <input type="email" name="email" placeholder="Email" required><br><br>
+            <input type="password" name="password" placeholder="Password" required><br><br>
+            <input type="text" name="rollno" placeholder="Roll Number" required><br><br>
+            <input type="submit" name="login" value="Login" id="login-button">
+            <input type="submit" name="signup" value="Sign Up" id="signup-button">
+        </form>
+    </div>
+
+    <script>
+        function redirectToComplete(message) {
+            if (message !== undefined) {
+                alert(message);
+            }
+            window.location.href = 'home1.html';
+        }
+
+        function redirectToLogin(message) {
+            if (message !== undefined) {
+                alert(message);
+            }
+            window.location.href = 'newlogin1.html';
+        }
+    </script>
+
+</body>
+</html>

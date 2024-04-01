@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Club - CEG College</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-image: url("https://www.imageshine.in/uploads/gallery/Free-vector-watercolor-background-Wallpaper.jpg");
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(34, 102, 212);
+            padding: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 8px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .club-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .club-image img {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .club-text {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        #flash-events {
+            display: flex;
+            overflow: hidden;
+        }
+
+        #flash-events img {
+            width: 20.33%;
+            animation: slideFlash 15s infinite alternate;
+        }
+
+        #second-row {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            overflow: hidden;
+        }
+
+        #second-row img {
+            width: 30%;
+            max-width: 350px;
+            padding: 10px;
+            border-radius: 8px;
+            animation: slideImage 15s infinite alternate;
+        }
+
+        @keyframes slideFlash {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes slideImage {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        #instagram-link {
+            text-align: center;
+            margin: 20px 0;
+            top: 89px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: rgb(34, 102, 212);
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>LEO CLUB - CEG College</h1>
+    </header>
+
+    <nav>
+        <a href="home1.html">Home</a>
+        <a href="leoeve.html">Events</a>
+        <a href="answer.php">Queries</a>
+        <a href="leocon.html">Contact</a>
+    </nav>
+
+    <div class="club-section">
+        <div class="club-image">
+            <img src="https://content.jdmagicbox.com/comp/chennai/m7/044pxx44.xx44.101126185323.t4m7/catalogue/leo-club-of-ceg-anna-university-chennai-clubs-199r0o1axr-250.jpg" alt="Dance Club Image">
+        </div>
+        <div class="club-text">
+            <center>
+                <p>Leadership is not a position or a title.</p>
+            </center>
+            <p>It is an action and an example”. LEO Club of CEG is a student body of College of Engineering Guindy,
+                which endeavours to enhance the leadership skills of students by providing them various opportunities and
+                experiences for their overall development. The motto of our club is “Leadership, Experience and
+                Opportunity”; the club improves the leadership and professional skills of students in addition to
+                moulding them into responsible individuals.</p>
+        </div>
+    </div>
+
+    <div id="flash-events">
+        <img src="l3.jpg" alt="Flash Event 1">
+        <img src="l2.jpg" alt="Flash Event 2">
+        <img src="data:image/png;base64,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" alt="Flash Event 3">
+    </div>
+
+    
+
+    <div id="instagram-link">
+        <p>Follow us on Instagram: <a href="https://www.instagram.com/danceclub_ceg" target="_blank">ledershipclub_ceg</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 ledership Club - CEG College. All rights reserved.</p>
+    </footer>

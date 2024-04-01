@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Events - CEG </title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+            background-size: cover;
+        }
+
+        header {
+          
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            padding: 20px;
+        }
+        #instagram-link {
+            text-align: center;
+            margin: 20px 0;
+            color: #fff;
+        }
+
+        .event-box {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            margin-left:40px;
+            margin-right:590px;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+        }
+
+        #moving-date {
+            font-size: 18px;
+            text-align: center;
+            animation: moveDate 2s infinite alternate, colorChange 2s infinite alternate;
+        }
+
+        @keyframes moveDate {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(10px);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #e74c3c;
+                font-size: 18px;
+            }
+            50% {
+                color: #f39c12;
+                font-size: 20px;
+            }
+            100% {
+                color: #e74c3c;
+                font-size: 18px;
+            }
+        }
+        footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #090909; /* Specify your desired background color */
+    color: #ffffff; /* Add a text color to ensure visibility on the background */
+}
+#postList {
+            list-style: none;
+            padding: 0;
+            
+        }
+
+        #postList li {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #efebeb;
+            padding-bottom: 1rem;
+        }
+
+        #postList img {
+            max-width: 10%;
+            height: 10%;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://e1.pxfuel.com/desktop-wallpaper/371/239/desktop-wallpaper-hacking-walkthrough-another-ctf-challenge-the-embedded-world-ctf.jpg"alt="Background Image" style="width: 100%; height: 100%; object-fit: cover; position: fixed; top: 0; left: 0; z-index: -1;">
+
+
+    <header>
+        <h1>CTF EVENTS - CEG </h1>
+    </header>
+    <section id="postSection">
+        <h2 style="color:white";>Post Your Thoughts</h2>
+        <form style="color:rgb(243, 235, 235), 8, 8)"id="postForm">
+            <label  style="color:white" for="postTitle">Title:</label>
+            <input type="text" id="postTitle" name="postTitle" required><br><br><br><br>
+
+            <label for="postContent"  style="color:white">Content:</label>
+            <textarea id="postContent" name="postContent" rows="4" required></textarea><br><br><br>
+
+            <label for="postImage"  style="color:white">Upload Image:</label>
+            <input type="file" id="postImage" name="postImage" accept="image/*"><br><br><br>
+
+            <button type="button" onclick="submitPost()"  style="color:rgb(2, 2, 2)">Submit Post</button>
+        </form>
+    </section>
+
+    <section id="viewPostsSection">
+        <h2>Your Posts</h2>
+        <ul class="event-box"id="postList"></ul>
+    </section>
+
+    <section>
+        <div class="event-box">
+            <h2>SMRT INDIA HACKATHON</h2>
+            <img style="height: 300px; width: 500px;" src="00.jpg" alt="Description of the image">
+
+            <p>The worlds biggest open innovation model is here! come and participate !
+            </p>
+            <p>Date: <span id="moving-date">December 6, 2023</span></p>
+        </div>
+        <div class="event-box">
+            <h2>CIRCUIT MANIA  </h2>
+            <img style="height: 300px; width: 500px;" src="22.jpg" alt="Description of the image">
+
+            <p>Sprah your synapses . Ignite your intellect.
+            </p>
+            <p>Date: <span id="moving-date">December 16, 2023</span></p>
+        </div>
+        <div class="event-box">
+            <h2>CTF PROJECTS</h2>
+            <img style="height: 300px; width: 500px;" src="66.jpg"alt="Description of the image">
+
+            <p>CTF PROJECTS- giving life to ideas . here we introduce new project ideas by students.
+            </p>
+            <p>Date: <span id="moving-date">november 29, 2023</span></p>
+        </div>
+        
+
+        <!-- Add more event boxes as needed -->
+
+    </section>
+
+    <footer>
+        <div id="instagram-link">
+            <p>Follow us on Instagram: <a href="https://instagram.com/theatron_au?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">danceclub_ceg</a></p>
+        </div>
+        <p>&copy; 2023 Magazine club - CEG College. All rights reserved.</p>
+    </footer>
+    <script>
+        function submitPost() {
+            var title = document.getElementById('postTitle').value;
+            var content = document.getElementById('postContent').value;
+            var image = document.getElementById('postImage').files[0];
+
+            if (title && content && image) {
+                // Simulate uploading the image (replace this with actual upload code)
+                // In a real application, you would send the image to a server for processing
+                console.log('Uploading image:', image);
+
+                // Simulate posting (replace this with actual post code)
+                console.log('Post submitted:', { title, content, image });
+
+                // Clear form fields after submission
+                document.getElementById('postTitle').value = '';
+                document.getElementById('postContent').value = '';
+                document.getElementById('postImage').value = ''; // Clear file input
+
+                // You can also update the UI to display the new post, e.g., by appending it to a list
+                // var postList = document.getElementById('postList');
+                // var newPostItem = document.createElement('li');
+                // newPostItem.textContent = title + ': ' + content;
+                // postList.appendChild(newPostItem);
+            } else {
+                alert('Please fill in title, content, and upload an image.');
+            }
+        }
+        function submitPost() {
+            var title = document.getElementById('postTitle').value;
+            var content = document.getElementById('postContent').value;
+            var imageInput = document.getElementById('postImage');
+            var image = imageInput.files.length > 0 ? URL.createObjectURL(imageInput.files[0]) : null;
+
+            var postList = document.getElementById('postList');
+            var newPostItem = document.createElement('li');
+
+            // Display the post content
+            newPostItem.innerHTML = `
+                <strong>${title}</strong>
+                <p>${content}</p>
+                ${image ? `<img src="${image}" alt="Posted Image">` : ''}
+            `;
+
+            postList.appendChild(newPostItem);
+
+            // Clear the form fields
+            document.getElementById('postForm').reset();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Member Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://images.shiksha.com/mediadata/images/articles/1654840471phpbGu7cM.jpeg");
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+
+        form {
+            background-color:rgba(185, 93, 93, 0.7) ;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 600px;
+            height: 100vh;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        label.checkbox-label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        label.textarea-label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #564caf;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s; /* Add smooth transition effect */
+        }
+
+        button:hover {
+            background-color: rgb(19, 0, 88);
+        }
+
+        button:active {
+            background-color: rgb(44, 42, 100);
+        }
+    </style>
+</head>
+<body>
+    <form action="form.php" method="post" onsubmit="redirectToComplete()">
+        <label for="clubname">Club Name :</label>
+        <input type="text" id="club_name" name="club_name" required>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone_no">Phone Number:</label>
+        <input type="tel" id="phone_no" name="phone_no" required>
+
+        <label for="dept">Department:</label>
+        <input type="text" id="dept" name="dept" required>
+
+        <label for="year">Year:</label>
+        <input type="text" id="year" name="year" required>
+        <label for="rollno">Rollno:</label>
+    <input type="text" id="rollno" name="rollno" pattern="\d{10}" maxlength="10" required>
+
+        <label class="checkbox-label">Interest Domain:</label>
+        <label><input type="checkbox" name="domain[]" value="content"> Content</label>
+        <label><input type="checkbox" name="domain[]" value="design"> Design</label>
+        <label><input type="checkbox" name="domain[]" value="events"> Events</label>
+        <label><input type="checkbox" name="domain[]" value="hospitality"> Hospitality</label>
+        <label><input type="checkbox" name="domain[]" value="humanrelations"> Human Relations</label><br><br>
+
+        <label class="textarea-label" for="reason">Why did you choose this club?</label>
+        <textarea id="reason" name="reason" rows="4" required></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+
+        function redirectToComplete() {
+            
+            window.location.href = 'complete.html';
+        }
+    </script>
+</body>
+</html>

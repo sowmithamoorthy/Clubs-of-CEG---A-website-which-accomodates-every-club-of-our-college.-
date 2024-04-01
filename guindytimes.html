@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Official Theatre Club of CEG</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url("C:\Users\jjaya\Downloads\tv3.png") no-repeat center center fixed;
+            background-size: cover;  
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-image: url("https://img.freepik.com/premium-vector/old-retro-newspaper-spread-pages-background-poster-vintage-newspaper-pages-seamless-pattern-newsprint-vector-background-illustration-retro-newspaper-page-backdrop_229548-2373.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: #070707;
+            position: relative;
+        }
+
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: auto;
+        }
+
+        #c {
+            background-color: #741414;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .college-info {
+            display: flex;
+            align-items: center;
+            background-color: rgb(171, 28, 28);
+            padding: 10px;
+        }
+
+        .college-logo {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #9f2020;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 8px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .club-image {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .description-box {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            padding: 80px;
+            padding-left: 100px;
+            padding-right: 200px;
+            margin: 20px;
+            border-radius: 10px;
+            align-items: center;
+        }
+
+        .description-logo {
+            width: 400px;
+            height: auto;
+            margin-right: 80px;
+        }
+
+        .description-text {
+            flex-grow: 1;
+            color: #fff;
+        }
+
+        #flash-events {
+            margin: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #flash-events img {
+            width: 100%;
+            max-width: 340px;
+            animation: slide 15s linear infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-400%); /* Adjust the percentage based on the number of images */
+            }
+        }
+
+        #instagram-link {
+            text-align: center;
+            margin: 20px 0;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: auto;
+            background-color: #9a1414;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img style="height:60px;width=60px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABR1BMVEX////HJyd3FxhTEREAAADKKChzFhd6GBlVERFISEhSEREUEhIXFBQQDAxOEBBBQUGcnJy6urpPT0+eHx+sIiLFDAxFDg41DA3HGhrAAAClICBJDw/cxMTv7+/VnJzfvr7Dw8OMHBw9DAzhzs7JhISYHh7IICAsCwspKCgfHR1wAABYWFi9JSWnp6fk5OQ9PT2EGhqzIyMvLy/Z2dlQAAAjIiK3AADAd3dhYWFra2tgExNeExO/XFx6enmCgoHOzs4hCAhBAACLi4sjCAhcQkIaCgrIjo7l3Ny5TEyjkZGgoKBiVFNPHBxRKSm9r69jLS1yRESFZmYwAAC3Ojq4ZGSvDQ3TqKhEICBTMjKtmpp/VlaPd3ejAACzbGwIISG6Q0MAExMzHBx6QECPUVKIOTqgLy9+AADdsbGZRER0KCinfHxkAACRAAB+L/OKAAAK0ElEQVR4nO3daUPbxhYGYLFYNiIy2BBDMCLGrN4XDNgG2yxhCWm6sbRpm6Y3ufemafv/P3dGm2VZy0iakWRlzueQ+MnIZ4T0HolhaNGihVaCIAT9EUiVcDBIVfq9TqfTS0UMWT3Ipe4uep12Kb1QazYP92ulXi7oD4WlBAHQFkXaHKDtHxaezfP87OwsX6iV+oOgP56XgrTKRX9Ie/aMF2lq8Ye19sUkGoXqIFdZ1NAK8zqaxrjQXqwG/YHRSwDfNYmWFmkFc5pYV2d7+Xyy9eYu/C0H0FLggOyoNPmrZkq7WlnJJLkErJlEK/mmElqjSiul52CDtKVd7uWz2YREUyvR+qaTCpqir2oVbGugQXbk3i/SLGz83ko+m0zobUPj215YWg5oIyPbmh3t6nIlkzGnaYw/94NtOZptLS1va5ay2TOwahl72bBarVcHwdCqg8Fo77f5rp2BVctyDmhD4/m3PtPU3o+0avwVWLWkK5pa59/582002tYsFu0K0FyumsEyfn9DUKbt/dK2ZrNqZ2Bbyzr5riEZfyDQccTzLLH3g+9a0+gUUkcD2xp2GiyO45LJ8x9f46e1tTu2Ze8HNITe74KWTCazWa47vbm0XD7CcYoDtrVFlWbfIGEXyXAzxGjJbnxzqVGeisGaeoFBWOmg0i4BjYBMpGXhqsU31xrlmESTC4Ow2mna7dhX4LxfOc8iQEsmuvVxGj5hrlQw7SJXmlNIArRsgq3vrDWmDGkYhelnBqsGez/BAxKBRkp4uYd/W5Nk0gF5AmjLxscjeeFllsSqyTSuK9Km0GkEhCtxNsHhtMm9X9zWnNOICKfjXc67kRuhOTgg/RCC8mBUT0bEHdsrjZgw7sKoNEijHTt8QmBkT1CNKg2194dDiGJ0vK2FTAiNJm1Vs62tlYnSCAuBsTvDmdA89P4wCdW2Kh+QoPf7S/NDCIxJsGpYtjXXheE3YCvh9GZwNH+E7E6ANiqkQiqkQiqkQiqUa5e0cCkoYWx3dfX5ixdH9w+RE0q0o/L98fXLGzz31sIilGmN2+Pr9S2smZrAhYD2HNCOTo+fMNMCF8q0R0i7IZiECkC4K9GWT7ef1qsOaVIWsNfro4du/RTCVYMN8vTa+aoptLYUmqiVkIPFfghjMm354fppy2nAQgxLX/SV2+9SFpB3ELolKoztirTH5ePrz1tOez+k3fW10auRe9TIxtwcCaHc+x/htua4QVbliPuQZnyTGoZuL+zjYSnMQnHVjo5ujzec04SqPjBnF5r46e2bO7tjIzU3j0WobGu3x08vHXcRfcTdJsQDs4DKjdxWwi5061k4PBlxQVNy4CU1C2hHy+d196gTrax16Na9UKbd32677f3DwJxtFvAS5sBN7lHD0G0OuzCmbGvOZGM0hNhtPsPZZQFh6Na05bgTxspOI65CdaDJge/bR9zPAE1eNZubfJLxldmh6lL4iE5TxptQA3MuQzyt1ju/hYY5cItVs4m429f5d+uWwryzo9RC5jQHLn3XMKR4EoahW1WY8S4Uh9JGcuD225qjiLtttc5/GevqOIQCOM/SRdztej84IPGEpUeL41o//irgFI7lwK1p0ngTGZoU4mHrO7+9xyJ8HKjjTTUUGoy4m+3Y3mRjt99Xj7EIG3IO3DbiDg5ITw3SnCblk07E2+/aG7m4hL/bjTeRi7gPo1eGyQJcQvMDcm8vk8fR+01oM6Y04sIzMQeOfJ7lmJZEDMwREF5dEs6Bgy7iIAuIV0iWduIqVYZJuCz9EMsmMERS9bSsO5oi3MYqNI/AOZQND0iv0StTobMzb1UISheBc0MD21rdS1jatXANSegqWTw63oQzMEdEGGfRjRyeiLsLodH3EFWIlCwmkgP3T2iRukUZbwqvcOSPjxk1DZJwWJqccCx1m5BSt8Mc+LJ/NF+EcChFWTVfcuAGRVgIai2AsLS2MAnXTIVs0CkjKqRCqSyE01RIur5iobMzb0nIR1549VUK41RIrJTY7TXGThMSoRIFvN3eMIjduhQuiT9zFrBQjid9sIwCuhX+wQcnjKnxpIeNJ9vklVvh3OE8byisExTG5OOxceognuROuPthsV075H0TqgH3h+uX6w4fy+tSeMsM+qXaf8gLY0pUesNtCty1kGFyvVdF0sLYBxfBKyzCU/GHK2xx7KfwClefPOk8CxnhNatbRnYTr3AjYCHDVH8tFqMtZJiDX7RGZ0L5alwj3EKGGWiMiEJJVm6s7WzGWZYtByU0vbs2KgR/y0fFaCOUF628vLRThzRQ8IcCEy6jCsE6fpLaqplQOR6X6pt1VqUp/9AkCBnm5r/QqBcqJ1qP/6t382dm1+cmQ8gw61+KQ6H82xo80fq8VRWE9u+zptd2JkbIME/F4qZmklAzclFtFyyEZsDwCRnm3f8f4Uza2InWYMKE+msh9jUoybM5RtcFoiFUJsiMrkBGQqjOyPm+hos+CS/mrISmZwk4hAvEhcLBoNJvN+UwqtF1AcJCnphQE3Cv7cv/kbN7jq6Th1U4HG5KqwH3WQuh+fW5sAnh4+lT4nCTZpBwdrQmdA2lua1eD+EZ7kZC8ysfwQmVewPycFMPTlovNFGm7fLT4/+Q+VH6/DNZoflvwO+ZA+nVJHA+voZEUwYJua6DNXz+Mijhn+jPcD8bzm3JYbAZvTGEwlgc7fH0JilwLsHG/RdmHQnr5jKkB52PGC2ufOAUcp6FvDhthzjcxHEnqnEChK4edM5xXdkYYqE03OR62o6T22o4hZf5vO0QOYJRbKuhFG5ymMZkYMuxeGpagMIkFh8kJme6ERVqHnTeiJjQYLjJDDhhQu1wE2oKfEKEw3Fkx2MyYRd6H24KrVBLa3jJ7odPKB+PHAvfBIFh4IK00PR3/FhdL/Q02BpuoeZ5DQSG7YIUyl81wu8UCFCYQR2Pn1DhVNmndwoEJ/SrqJAKqZAKqZAKqZAKqZAKIyOcj7iwoqSxIisctPf5YIWkr3kzi6VagQ9EKP0ODWP7RO/MMEyun24Co49CzbCFlNonev8QVqqXbs77IdTNkSgTCeSFjFDpzH1DUhjb3d0FB+TaTjyRndYNW/giZJjq3ffjs4QYhMprSR7ef/xJ6tkGuTYroeEDrN3VwQ9FvdGLUBpGXr1/2Jbe3TEozQctFAe04t6FygsFTrc/r2vGWtWcd5BC8DE+jhidCeUR8vLpttHLZHKlUAjBKc4XjRFRqDytQXzDhel/XjjWkBmde7UTyi/KKd8fb9hOx4dHCI3qLKH5VNCuvGrIL8oJkxDUO8nIjqVAYmr3v7Z/XEOYhbJRK5T7SEPp/k4rdEJG+KtYFIVy95fekub+7wufEBg//f0Iu//t9gaGd9tZCi1+tyApZJgbrw9s0JTL950SFuIsVWj0tCYqnIiiQioMf1EhFYa/qPCrFb7YCvqDI5el0PxNklQYoqLCyRemIi9U7zVHV7hg8bziaAjneCqkwpDXVyBciLxQ2S0cPbthkoS5dIGPtlDozR3ykRYy1b4UvoquUAomFSItBO2mk24aJZOiI4Thq7fRFoKv4+uxYFLEhPqnY0dROB6+shJ6vvkcUKVGwldRFDLMuy/FiAvF8FU80kJg/DZetBLCUNlkCxklfKUXKlHA++MN76+3CLz+AkZVqDwK/ANCFHByCoav1oZPOceRTgpd3Xz658jwKee0aNGa+PoX2dDbEESTSYoAAAAASUVORK5CYII=" alt="Theatron Logo">
+        <h1>GUINDY TIMES</h1>
+        <h4>THE OFFICIAL </h4><h1>MAGAZINE CLUB</h1>
+    </header>
+
+    <div id="c">
+        <div class="college-info">
+            <!-- College Logo -->
+            <img class="college-logo" src="https://ceg.annauniv.edu/images/gallerynew/4.jpg" alt="College Logo">
+            <!-- College Name -->
+            <h2>AU-CEG</h2>
+        </div>
+
+        <nav>
+            <a href="home1.html">Home</a>
+            <a href="gteve.html">Events</a>
+            <a href="gt_ans.php">Queries</a>
+            <a href="gtcon.html">Contact</a>
+        </nav>
+    </div>
+    <h2 style="text-align:center;color:#300808"> WELCOME TO GUINDY TIMES</h2>
+
+    <div class="club-image">
+        <!-- Your video or image goes here -->
+    </div>
+
+    <div class="description-box">
+        <!-- Description Logo -->
+        <img class="description-logo" src=https://play-lh.googleusercontent.com/r3ZlYIB-ZjCbyVtZmW9dKqKH2CSaNLzT2Q_xUSQtJx7pde1C0BkkmG-ktBJZVqBMNw alt="Description Logo">
+        <!-- Description Text -->
+        <div class="description-text">
+            <h4 style="color:rgb(48, 8, 8)">The Guindy Times is the official campus magazine of CEG, AC Tech and SAP. <BR><BR>This students' magazine is a media body which aims to provide regular updates regarding all the happenings of the college.   </h4>
+        </div>
+    </div>
+
+    <div id="flash-events">
+        <H1 STYLE="COLOR:BROWN">TAKE A LOOK AT OUR PREVIOUS HITS</H1>
+        <!-- Add images for flash events, adjust the file names accordingly -->
+        <img src="gt1.jpg" alt="Flash Event 1">
+        <img src="gt2.jpg" alt="Flash Event 3">
+        <img src="WhatsApp Image 2023-12-03 at 03.16.13_eb4e7504.jpg" alt="Flash Event 4">
+        <img src="gt3.jpg" alt="Flash Event 5">
+    </div>
+
+    <footer>
+        <div id="instagram-link">
+            <p>Follow us on Instagram: <a href="https://instagram.com/theatron_au?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">danceclub_ceg</a></p>
+        </div>
+        <p>&copy; 2023 MAGAZINE CLUB - CEG College. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

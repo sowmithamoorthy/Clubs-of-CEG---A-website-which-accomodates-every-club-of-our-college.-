@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEG Official Clubs</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+             /* Prevent background image scrolling */
+            
+        }
+
+        header {
+            background-color: transparent;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .clubs-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            min-height: calc(100vh - 40px);
+            background-color: #f0f0f063;
+            margin-top: 60px; /* Adjusted to make space for the fixed header */
+        }
+
+        .club-container {
+            flex: 0 0 calc(25% - 10px);
+            margin: 5px;
+            padding: 5px;
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.7);
+            position: relative;
+            width: 100px;
+        }
+
+        .club-container:first-child {
+            background: url("background-image.jpg") no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+
+        .club-container:hover {
+            transform: scale(1.05);
+        }
+
+        .club-image {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .club-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .club-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .club-name {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: grey;
+            color: #000000;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .background-img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        header {
+            background: rgba(6, 6, 6, 0.5);
+            padding: 10px;
+            margin-top: -30px;
+            z-index: 1;
+        }
+
+        h1 {
+            margin: 0;
+            color: white;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 200px;
+            padding: 10px; /* Increase padding for a better Netflix-style look */
+            border: none;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #e50914; /* Netflix red color */
+            color: white;
+            cursor: pointer;
+        }
+        .event-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.event-image {
+    s /* Assuming your image should be rounded */
+    width: 200px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    transition: opacity 0.5s ease-in-out;
+}
+
+    </style>
+</head>
+
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCYJQeg6gyK1AT-ILQ75RxpmsiLP0AywSmc1E0MnQy53CF7dTU4GdEkEQ-r4gv4qQT4cw&usqp=CAU" alt="Background Image" class="background-img">
+
+    <header><br>
+        <h1>CEG Official Clubs</h1>
+       
+    </header>
+    <br><br><br>
+    
+    <button id="homeButton" onclick="goToHomePage()">HOME</button>
+
+    <button onclick="filterClubs('tech')">Tech</button>
+    <button onclick="filterClubs('communication')">Communication</button>
+    <button onclick="filterClubs('journalism')">Journalism</button>
+
+    <div class="clubs-container" >
+        <!-- Club 1 -->
+        <div class="club-container" onclick="window.location.href='ctf.html'" style="margin-bottom: -10px;"  data-categories="tech">
+            <div class="club-details" style="background: rgba(2, 78, 141, 0.87); padding: 10px;">
+                <div class="club-name">CEG TECH FORUM</div>
+                <img class="club-image" src="https://img.freepik.com/free-vector/blue-copy-space-digital-background_23-2148821698.jpg" alt="Club 1 Background">
+                <img src="https://pbs.twimg.com/profile_images/1352906032868069376/cageBrPx_400x400.jpg" alt="Club 1 Logo" class="club-logo">
+            </div>
+        </div>
+        <!-- Club 4 -->
+        <div class="club-container" onclick="window.location.href='aupodium.html'" style="margin-top: -10px;" data-categories="communication">
+            <div class="club-details" style="background: rgba(222, 10, 155, 0.87); padding: 10px;">
+                <div class="club-name" style="color: rgb(11, 10, 10);">AU PODIUM</div>
+                <img class="club-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFodoeRLxioxUwxkYkL1iNwD5748ye08t0trZOeF08B3wJvAh0lDYOXutDpypsxpZ7dzo&usqp=CAU" alt="Club 4 Background">
+                <img src="aulogo.jpg" alt="Club 4 Logo" class="club-logo">
+            </div>
+        </div>
+        
+
+        <!-- Club 3 -->
+         <div class="club-container" onclick="window.location.href='spartanz.html'"  data-categories="dance"  style="background: url('https://png.pngtree.com/background/20210710/original/pngtree-chinese-style-red-background-picture-image_978332.jpg') no-repeat center center fixed; background-size: cover;">
+            <div class="club-details" style="background: rgba(255, 192, 203, 0.5); padding: 10px;">
+                <div class="club-name" style="color: white;">SPARTANZ</div>
+                <img class="club-image" src="https://png.pngtree.com/background/20210710/original/pngtree-chinese-style-red-background-picture-image_978332.jpg" alt="Club 3 Background">
+                <img src="spa.jpg"  class="club-logo">
+            </div>
+        </div>
+
+      
+
+        <!-- Club 5 -->
+        <div class="club-container"  data-categories="communication" onclick="window.location.href='leo.html'" style="margin-top: -10px; ">
+            <div class="club-details" style="background: rgba(241, 39, 17, 0.87); padding: 10px;">
+                <div class="club-name style=color: ;">LEO</div>
+                <img class="club-image" src="data:image/jpeg;base64,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" alt="Club 5 Background">
+                <img src="leo.jpg" alt="Club 5 Logo" class="club-logo">
+            </div>
+        </div>
+          <!-- Club 2 -->
+          <div class="club-container"  data-categories="journalism" onclick="window.location.href='theatron.html'">
+            <div class="club-details" style="background: rgba(214, 140, 49, 0.87); padding: 10px;">
+                <div class="club-name" style="color: rgb(20, 17, 17);">THEATRON</div>
+                <img class="club-image" src="https://img.freepik.com/premium-photo/brown-grunge-texture-background_145345-21.jpg" alt="Club 2 Background">
+                <img src="thea.jpg" alt="Club 2 Logo" class="club-logo">
+            </div>
+        </div>
+        
+        <!-- Club 6 -->
+        <div class="club-container"  data-categories="journalism" onclick="window.location.href='guindytimes.html'">
+            <div class="club-details" style="background: rgba(252, 255, 84, 0.87); padding: 10px;">
+                <div class="club-name" style="color:rgb(0, 0, 0);">GUINDY TIMES</div>
+                <img class="club-image" src="data:image/jpeg;base64,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" alt="Club 6 Background">
+                <img src="gt.jpg" alt="Club 6 Logo" class="club-logo">
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+
+    
+
+    <footer>
+        <br><br><br><br><br><br>
+        <p style="font-style: :italic;color:white">&copy; 2023 CEG Official Clubs
+            contact us : https://www.annauniv.edu/<br><br><br><Br>
+            Located in the heart of Chennai city, the sprawling campus of the College of Engineering, Guindy (CEG) with cutting edge infrastructure<br> has been the foundation for many a successful engineer, scholar, and leader. The University offers 10 UG(Regular), 2 UG(Tamil Medium), 4 UG(Self-Supporting), 3 UG(Part time),<br> 34 PG(Regular), 20 PG(Self-supporting) and 3 PG(Part time) courses. CEG has 17 Departments and 17 Research Centres where research programs are offered. <br>With close ties with industry, excellent research practices and multiple extra-curricular options, the institution advances the progression of the student's quest for knowledge. <br>The faculty along with the excellent student population makes the campus one of the best places to study in the nation.
+            <br><br><br><br><br><br><br><br><br>
+        </p>
+    </footer>
+
+    <script>
+        // Sample club data for testing
+        const clubsData = [
+            { name: 'Club 1', image: 'club1.jpg', logo: 'logo1.png' },
+            { name: 'Club 2', image: 'club2.jpg', logo: 'logo2.png' },
+            { name: 'Club 3', image: 'club3.jpg', logo: 'logo3.png' },
+            // Add more club data as needed
+        ];
+
+        // Function to initialize the clubs on page load
+        function initClubs() {
+            const clubsContainer = document.getElementById('clubs-container');
+
+            // Create club elements and append them to the container
+            clubsData.forEach((club) => {
+                const clubContainer = document.createElement('div');
+                clubContainer.classList.add('club-container');
+
+                if (club.image) {
+                    const clubImage = document.createElement('img');
+                    clubImage.classList.add('club-image');
+                    clubImage.src = club.image;
+                    clubImage.alt = `${club.name} Image`;
+                    clubContainer.appendChild(clubImage);
+                }
+
+                if (club.logo) {
+                    const clubLogo = document.createElement('img');
+                    clubLogo.classList.add('club-logo');
+                    clubLogo.src = club.logo;
+                    clubLogo.alt = `${club.name} Logo`;
+                    clubContainer.appendChild(clubLogo);
+                }
+
+                const clubDetails = document.createElement('div');
+                clubDetails.classList.add('club-details');
+
+                const clubName = document.createElement('div');
+                clubName.classList.add('club-name');
+                clubName.textContent = club.name;
+
+                clubDetails.appendChild(clubName);
+                clubContainer.appendChild(clubDetails);
+
+                clubsContainer.appendChild(clubContainer);
+            });
+        }
+
+        // Function to search clubs
+        function searchClubs() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const clubsContainer = document.getElementById('clubs-container');
+            clubsContainer.innerHTML = ''; // Clear previous results
+
+            // Filter clubs that match the search input
+            const filteredClubs = clubsData.filter((club) =>
+                club.name.toLowerCase().includes(searchInput)
+            );
+
+            // Create club elements for the filtered clubs and append them to the container
+            filteredClubs.forEach((club) => {
+                const clubContainer = document.createElement('div');
+                clubContainer.classList.add('club-container');
+
+                if (club.image) {
+                    const clubImage = document.createElement('img');
+                    clubImage.classList.add('club-image');
+                    clubImage.src = club.image;
+                    clubImage.alt = `${club.name} Image`;
+                    clubContainer.appendChild(clubImage);
+                }
+
+                if (club.logo) {
+                    const clubLogo = document.createElement('img');
+                    clubLogo.classList.add('club-logo');
+                    clubLogo.src = club.logo;
+                    clubLogo.alt = `${club.name} Logo`;
+                    clubContainer.appendChild(clubLogo);
+                }
+
+                const clubDetails = document.createElement('div');
+                clubDetails.classList.add('club-details');
+
+                const clubName = document.createElement('div');
+                clubName.classList.add('club-name');
+                clubName.textContent = club.name;
+
+                clubDetails.appendChild(clubName);
+                clubContainer.appendChild(clubDetails);
+
+                clubsContainer.appendChild(clubContainer);
+            });
+        }
+
+        // Initialize clubs on page load
+        initClubs();
+        
+        function searchClubs() {
+    var input, filter, clubs, clubContainer, i, categories;
+    input = document.getElementById('search');
+    filter = input.value.toUpperCase();
+    clubs = document.getElementsByClassName('club-container');
+
+    for (i = 0; i < clubs.length; i++) {
+        categories = clubs[i].getAttribute('data-categories').toUpperCase();
+        if (categories.indexOf(filter) > -1) {
+            clubs[i].style.display = '';
+        } else {
+            clubs[i].style.display = 'none';
+        }
+    }
+}
+function filterClubs(category) {
+        var clubs, i, categories;
+        clubs = document.getElementsByClassName('club-container');
+
+        for (i = 0; i < clubs.length; i++) {
+            categories = clubs[i].getAttribute('data-categories');
+            if (categories.includes(category)) {
+                clubs[i].style.display = '';
+            } else {
+                clubs[i].style.display = 'none';
+            }
+        }
+    }
+    function goToHomePage() {
+        // Replace 'home.html' with the actual URL of your home page
+        window.location.href = 'home1.html';
+    }
+
+
+    </script>
+</body>
+
+</html>

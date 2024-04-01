@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Club - CEG College</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-image: url("https://www.imageshine.in/uploads/gallery/Free-vector-watercolor-background-Wallpaper.jpg");
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(34, 102, 212);
+            padding: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 8px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .club-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .club-image img {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .club-text {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        #flash-events {
+            display: flex;
+            overflow: hidden;
+        }
+
+        #flash-events img {
+            width: 20.33%;
+            animation: slideFlash 15s infinite alternate;
+        }
+
+        #second-row {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            overflow: hidden;
+        }
+
+        #second-row img {
+            width: 30%;
+            max-width: 350px;
+            padding: 10px;
+            border-radius: 8px;
+            animation: slideImage 15s infinite alternate;
+        }
+
+        @keyframes slideFlash {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes slideImage {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        #instagram-link {
+            text-align: center;
+            margin: 20px 0;
+            top: 89px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: rgb(34, 102, 212);
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>LEO CLUB - CEG College</h1>
+    </header>
+
+    <nav>
+        <a href="phome.html">Home</a>
+        <a href="pleoeve.html">Events</a>
+        <a href="demo1.php">Quries</a>
+      
+    </nav>
+
+    <div class="club-section">
+        <div class="club-image">
+            <img src="https://content.jdmagicbox.com/comp/chennai/m7/044pxx44.xx44.101126185323.t4m7/catalogue/leo-club-of-ceg-anna-university-chennai-clubs-199r0o1axr-250.jpg" alt="Dance Club Image">
+        </div>
+        <div class="club-text">
+            <center>
+                <p>Leadership is not a position or a title.</p>
+            </center>
+            <p>It is an action and an example”. LEO Club of CEG is a student body of College of Engineering Guindy,
+                which endeavours to enhance the leadership skills of students by providing them various opportunities and
+                experiences for their overall development. The motto of our club is “Leadership, Experience and
+                Opportunity”; the club improves the leadership and professional skills of students in addition to
+                moulding them into responsible individuals.</p>
+        </div>
+    </div>
+
+    <div id="flash-events">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUWFRgWFhUYGRgZH65f3BWQoUKDr8IJ9x8DQt7hR0KGIFRbnChQpITBQoUKYj/2Q==" alt="Flash Event 1">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUTERIWUBt3dWUjYw8LTfvmoXG7JknTCRwqLkTyszGygcRY7k6/Vgcutddmby4ZNlph2ktKDJdcr/Oe471rcvOpHBb14MRFDMVISGNbI5pSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoD//Z" alt="Flash Event 2">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUUFBgSFRUZGBgaGhkbGBsaGxscGhgYIxkbGRsbGxofOTE2MTMxUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoD//Z" alt="Flash Event 3">
+    </div><br><br><br>
+    <form action="leoupload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit" name="addImage">Add Image</button>
+    </form>
+    <br><br>
+
+    
+
+    <div id="instagram-link">
+        <p>Follow us on Instagram: <a href="https://www.instagram.com/danceclub_ceg" target="_blank">danceclub_ceg</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Dance Club - CEG College. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Function to fetch images from the server and update the HTML
+        function fetchImagesAndUpdateHTML() {
+            // Make an AJAX request to fetch images
+            fetch('leoupload.php?getImages=true', {
+                method: 'GET',
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Update the HTML to display fetched and existing images
+                    const flashEvents = document.getElementById('flash-events');
+                    
+                    // Create a new h1 element for flash events
+                    const h1Element = document.createElement('h1');
+                    h1Element.style.color = 'brown';
+                    h1Element.textContent = 'TAKE A LOOK AT OUR PREVIOUS HITS';
+                    flashEvents.appendChild(h1Element);
+        
+                    // Create img elements for each image and append them to flash events
+                    data.images.forEach(image => {
+                        const imgElement = document.createElement('img');
+                        imgElement.src = 'luploads/' + image.filename;
+                        imgElement.alt = 'Flash Event Image';
+                        flashEvents.appendChild(imgElement);
+                    });
+                } else {
+                    console.error('Failed to fetch images:', data.error);
+                }
+            })
+            .catch(error => console.error('Error fetching images:', error));
+        }
+        
+        // Call the function to fetch and update images on page load
+        fetchImagesAndUpdateHTML();
+        </script>
+        <script>
+    // Function to handle the response after adding an image
+    function handleImageUploadResponse(response) {
+    // Check if the image upload was successful
+    if (response.success) {
+      // Display a success message or redirect to the home page
+      alert(response.message);
+      // Redirect to the home page after displaying the alert
+      window.location.href = 'pleo.html';
+    } else {
+      // Display an error message (you may customize this part)
+      alert('Error adding image: ' + response.error);
+    }
+    }
+    
+    
+    </script><script>
+    // Function to handle the response after adding an image
+    function handleImageUploadResponse(response) {
+        // Check if the image upload was successful
+        if (response.success) {
+            // Redirect to the home page after displaying the alert
+            window.location.href = 'pleo.html';
+        } else {
+            // Display an error message (you may customize this part)
+            alert('Error adding image: ' + response.error);
+        }
+    }
+    </script>

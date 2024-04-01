@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AU PODIUM- CEG College</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: rgb(219, 37, 137);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .event-box {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+        }
+
+        .event-box img {
+            max-width: 20%;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .event-content {
+            flex: 1;
+            padding: 15px;
+        }
+
+        #moving-date {
+            font-size: 18px;
+            text-align: center;
+            animation: moveDate 2s infinite alternate, colorChange 2s infinite alternate;
+        }
+
+        @keyframes moveDate {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #e74c3c;
+                font-size: 18px;
+            }
+            50% {
+                color: #f39c12;
+                font-size: 20px;
+            }
+            100% {
+                color: #e74c3c;
+                font-size: 18px;
+            }
+        }
+        #postList {
+            list-style: none;
+            padding: 0;
+        }
+
+        #postList li {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1rem;
+        }
+
+        #postList img {
+            max-width: 10%;
+            height: 10%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AU PODIUM- CEG College</h1>
+    </header>
+    <section id="postSection">
+        <h2>Post Your Thoughts</h2>
+        <form style="color:rgb(243, 235, 235), 8, 8)"id="postForm">
+            <label for="postTitle">Title:</label>
+            <input type="text" id="postTitle" name="postTitle" required><br><br><br><br>
+
+            <label for="postContent">Content:</label>
+            <textarea id="postContent" name="postContent" rows="4" required></textarea><br><br><br>
+
+            <label for="postImage">Upload Image:</label>
+            <input type="file" id="postImage" name="postImage" accept="image/*"><br><br><br>
+
+            <button type="button" onclick="submitPost()">Submit Post</button>
+        </form>
+    </section>
+
+    <section id="viewPostsSection">
+        <h2>Your Posts</h2>
+        <ul class="event-box"id="postList"></ul>
+    </section>
+
+
+    <section>
+        <div class="event-box">
+            <img src="auopencall.jpg" alt="Event Image">
+            <div class="event-content">
+                <h2>OPEN CALL</h2>
+                <p> open call: Join AU PODIUM  speech Club's open call! , Step onto the stage of confidence 
+                    and eloquence! Join AU Podium Speech Club’s
+                     open call and unlock your speaking potential today.y.</p>
+                <p>Date: <span id="moving-date">November 29, 2023</span></p>
+            </div>
+        </div>
+
+        <div class="event-box">
+           <img src="auspeechevent.jpg" alt="Event Image">
+            <div class="event-content">
+            <h2>SKILL TRAINING</h2>
+            <p> Skill training : The event will take place in the EEE Department wifi hunt, starting at 4 p.m.
+                 We invite you to join and participate.</p>
+            <p>Date: <span id="moving-date">November 30, 2023</span></p>
+            </div>
+        </div>
+
+        <!-- Add more event boxes as needed -->
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Dance Club - CEG College. All rights reserved.</p>s
+    </footer>
+    <script>
+        function submitPost() {
+            var title = document.getElementById('postTitle').value;
+            var content = document.getElementById('postContent').value;
+            var image = document.getElementById('postImage').files[0];
+
+            if (title && content && image) {
+                // Simulate uploading the image (replace this with actual upload code)
+                // In a real application, you would send the image to a server for processing
+                console.log('Uploading image:', image);
+
+                // Simulate posting (replace this with actual post code)
+                console.log('Post submitted:', { title, content, image });
+
+                // Clear form fields after submission
+                document.getElementById('postTitle').value = '';
+                document.getElementById('postContent').value = '';
+                document.getElementById('postImage').value = ''; // Clear file input
+
+                // You can also update the UI to display the new post, e.g., by appending it to a list
+                // var postList = document.getElementById('postList');
+                // var newPostItem = document.createElement('li');
+                // newPostItem.textContent = title + ': ' + content;
+                // postList.appendChild(newPostItem);
+            } else {
+                alert('Please fill in title, content, and upload an image.');
+            }
+        }
+        function submitPost() {
+            var title = document.getElementById('postTitle').value;
+            var content = document.getElementById('postContent').value;
+            var imageInput = document.getElementById('postImage');
+            var image = imageInput.files.length > 0 ? URL.createObjectURL(imageInput.files[0]) : null;
+
+            var postList = document.getElementById('postList');
+            var newPostItem = document.createElement('li');
+
+            // Display the post content
+            newPostItem.innerHTML = `
+                <strong>${title}</strong>
+                <p>${content}</p>
+                ${image ? `<img src="${image}" alt="Posted Image">` : ''}
+            `;
+
+            postList.appendChild(newPostItem);
+
+            // Clear the form fields
+            document.getElementById('postForm').reset();
+        }
+    </script>
+
+</body>
+</html>

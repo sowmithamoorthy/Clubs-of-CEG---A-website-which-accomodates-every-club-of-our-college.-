@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AU PODIUM Club - CEG College</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-image: url("data:image/jpeg;base64,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");
+            color: rgb(235, 224, 232);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(178, 31, 117);
+            padding: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 8px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #756c6c;
+        }
+
+        .club-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .club-image img {
+            width: 100%;
+            max-width: 150px;
+            margin-left:100px;
+        }
+
+        .club-text {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        #flash-events {
+            display: flex;
+            overflow: hidden;
+        }
+
+        #flash-events img {
+            width: 20.33%;
+            animation: slideFlash 15s infinite alternate;
+        }
+
+        #second-row {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            overflow: hidden;
+        }
+
+        #second-row img {
+            width: 30%;
+            max-width: 350px;
+            padding: 10px;
+            border-radius: 8px;
+            animation: slideImage 15s infinite alternate;
+        }
+
+        @keyframes slideFlash {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes slideImage {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        #instagram-link {
+            text-align: center;
+            margin: 20px 0;
+            top: 89px;
+        }
+
+        footer {
+            text-align: center;
+            background-color:  rgb(224, 51, 152);
+            color:rgb(82, 8, 67);
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>AU PODIUM SPEECHING  CLUB - CEG College</h1>
+    </header>
+
+    <nav>
+        <a href="home1.html">Home</a>
+        <a href="auevent.html">Events</a>
+        <a href="au_ans.php">Queries</a>
+        <a href="aucon.html">Contact</a>
+    </nav>
+
+    <div class="club-section">
+        <div class="club-image">
+            <img src="aulogo.jpg" alt="Dance Club Image">
+        </div>
+        <div class="club-text">
+           
+            <p>
+                <center>The club adheres to its motto of STAND, SPEAK, SUCCEED.</center><br>
+                 At AU-Podium, we aim to motivate and help all of our members to work with their fears of public 
+                 speaking and own the spotlight. To improve students’ confidence to express themself efficiently in any situation.
+                   We shall together discover new heights
+                 of eloquence, enjoy the art of speaking, and relish the beauty of communication through this amazing club.</p>
+        </div><br><br>
+    </div>
+
+    <div id="flash-events">
+        <img src="aulogo.jpg" alt="Flash Event 1">
+        <img src="auopencall.jpg" alt="Flash Event 2">
+        <img src="aulogo.jpg" alt="Flash Event 3">
+    </div>
+
+    
+
+    <div id="instagram-link">
+        <p>Follow us on Instagram: <a href="https://www.instagram.com/aupodiumclub_ceg" target="_blank">speechclub_ceg</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 speech Club - CEG College. All rights reserved.</p>
+    </footer>
